@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MireaProject</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Муравьев Владислав Романович</string>
+    <string name="nav_header_subtitle">Номер по списку: 21</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_browser">Browser</string>
+    <string name="menu_data">Data</string>
+    <string name="menu_home">Home</string>
+    <string name="lorem">jgdghiodigoidhgihrgyeygoyeyrogyeogye;ogyoegoerhg;oerhgoerhgoerhgoerhgoehgoehgeohgoerhgoehgoehgoehgoerhgoehgoehgoerhgoehgeorghoehgoeihgoegoerhgoergheorgheorhgeorgheorhgeorhgoehgoehgoieriger</string>
+</resources>
