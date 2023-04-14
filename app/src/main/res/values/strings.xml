@@ -8,8 +8,9 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_browser">Browser</string>
-    <string name="menu_data">Data</string>
     <string name="menu_home">Home</string>
+    <string name="menu_data">Data</string>
+    <string name="menu_video">Video</string>
 
     <string name="hello_fragment_home">Для навигации используйте меню слева!</string>
 
@@ -17,4 +18,7 @@
 Google был создан как поисковая система, которая предлагала пользователям более точные результаты поиска, чем другие поисковые системы того времени. С помощью новой технологии, которую они разработали, называемой PageRank, Google мог предоставлять более релевантные результаты поиска для пользователей.\n\n
 С течением времени Google стал более чем просто поисковой системой. Компания разработала множество других продуктов, таких как Gmail, Google Maps, YouTube, Google Drive и многие другие. Google также занял лидирующие позиции в области онлайн-рекламы, предоставляя рекламодателям возможность достигать своей целевой аудитории на миллионах сайтов в Интернете.\n\n
 Сегодня Google является одной из самых крупных и успешных компаний в мире информационных технологий. Компания имеет огромное количество пользователей по всему миру и продолжает разрабатывать новые продукты и технологии, которые меняют нашу жизнь и способ общения в Интернете.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="never_gonna_give_you_up_link">https://save4k.com/video.php?url=UUZGFkBYGkkRB1ZbRQYFFQpDHVJdVl4JUk5fAQELFlFWXx0QWgZQCRMOU0tVAgUKWlRLRVtLXFgGDg5UUF0ICwgAFANaX1IlW1doe00FIw5IdWR7AWpJB3Z6EAwUWQ0DFwUFSAJTDEhXVhRbU14JTCR-SV9-UVATb1VpAzAxX0tYdHkIYyZxPDUnYUN7EANSV1hGXXZ-WyZoCE4EQg1MU14PA14VEVoTEQFXD04MExUQU1YTQFxIEF5KUxYXCAVLXEEUC1tfAgVFD18PBFJDUyYDChNfVwQWWRUEUAMIXVxVQBdUcBFbS1FXVVcADRxXQ1xACFNMHFd0SlIQQglOD1QUXxBaXwdAEw4PAAVFDw8MRVBCXF1bFUQFBFRXUw0CH0RCFEVfBEAOC19XChUPBQBeFgd0VElREVtYF1lVDBRLU0YDURtFBxARD0tSEEAFEEMOBwMLF1UOCRAJCRAFAw8FBlQAUQJSUFEHAg9RXkcIRQ4EBAEIUQEADlBTQl5EUEIPVxUEUB4TXwAGB1NRU1EHFVYPeHchZXd/IUIQQEIEBgdVA1YGUkURQlNFAgsSWFRLRVtLXEAFe1MMQVZ7W0kXACVaBhBUIAtGU1BGVCIWXkZHUVwcV3RKUxQRDUpXSkFeQwEhQxYRFBcAdA4PDAAUAXZRV0tABXtEBBABWktJU0EVFlB2AhYQFwB0DwsVQ0JaUg94dhQHaXxdEzZ5e15qQD8KL14MWzd3RkYxXwILcHR/YE5fDk8IdBMvVkx8amUKD1IRYS8XVHZndConVDZCd1NgUU4uUwBCNlUtbnBNUXQfYxZnDw5ad1hEAR87MwldUkFpeDpbHloWFAVKU1RBDwtbRwclDg8XAHQOCERXcl5GFwt6CEEdBCYJElEXC3FCChZQdg8NC0ZRQA0CAxVCFVlBUF5Ydn8FJjsceUVrY3sOcitxX1oTBFNdBlc1FWFkeFNQQxxWAWYSPQF7QHULSyl1LEM1KC1gaF4nPygkWHIFS1JRNE4JWB0MIAB4VnhcVkk3QRYgI0N2VQk3BjNBdUcEQ3pRA1d-K1w1HQF9FwEi&amp;sid=9c3bd780&amp;title=Rick+Astley+-+Never+Gonna+Give+You+Up.mp4</string>
 </resources>
