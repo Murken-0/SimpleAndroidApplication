@@ -28,4 +28,11 @@
         android:name="ru.mirea.muravievvr.mireaproject.fragments.background.BackgroundFragment"
         android:label="@string/menu_video"
         tools:layout="@layout/fragment_background" />
+
+    <fragment
+        android:id="@+id/nav_sensors"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.SensorsFragment"
+        android:label="@string/menu_steps"
+        tools:layout="@layout/fragment_sensors"/>
+
 </navigation>
