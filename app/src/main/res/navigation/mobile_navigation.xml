@@ -35,4 +35,10 @@
         android:label="@string/menu_steps"
         tools:layout="@layout/fragment_sensors"/>
 
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.CameraFragment"
+        android:label="@string/menu_contacts"
+        tools:layout="@layout/fragment_camera"/>
+
 </navigation>

@@ -24,5 +24,9 @@
             android:id="@+id/nav_sensors"
             android:icon="@drawable/steps"
             android:title="@string/menu_steps" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/contact"
+            android:title="@string/menu_contacts" />
     </group>
 </menu>

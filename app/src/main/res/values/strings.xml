@@ -12,6 +12,7 @@
     <string name="menu_data">Data</string>
     <string name="menu_video">Video</string>
     <string name="menu_steps">Steps</string>
+    <string name="menu_contacts">Add contact</string>
 
     <string name="hello_fragment_home">Для навигации используйте меню слева!</string>
 

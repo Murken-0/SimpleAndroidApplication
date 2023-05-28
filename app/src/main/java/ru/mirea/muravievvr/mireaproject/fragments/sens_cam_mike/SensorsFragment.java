@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import ru.mirea.muravievvr.mireaproject.databinding.FragmentMicrophoneBinding;
 import ru.mirea.muravievvr.mireaproject.databinding.FragmentSensorsBinding;
 
 public class SensorsFragment extends Fragment implements SensorEventListener {
