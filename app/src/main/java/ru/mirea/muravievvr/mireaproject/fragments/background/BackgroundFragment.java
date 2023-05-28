@@ -1,4 +1,4 @@
-package ru.mirea.muravievvr.mireaproject.fragments;
+package ru.mirea.muravievvr.mireaproject.fragments.background;
 
 import android.net.Uri;
 import android.os.AsyncTask;
