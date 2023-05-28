@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="ru.mirea.muravievvr.mireaproject.ui.home.HomeFragment"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_browser"
-        android:name="ru.mirea.muravievvr.mireaproject.ui.BrowserFragment"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.BrowserFragment"
         android:label="@string/menu_browser"
         tools:layout="@layout/fragment_browser" />
 
     <fragment
         android:id="@+id/nav_data"
-        android:name="ru.mirea.muravievvr.mireaproject.ui.DataFragment"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.DataFragment"
         android:label="@string/menu_data"
         tools:layout="@layout/fragment_data" />
 
     <fragment
         android:id="@+id/nav_video"
-        android:name="ru.mirea.muravievvr.mireaproject.ui.BackgroundFragment"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.BackgroundFragment"
         android:label="@string/menu_video"
         tools:layout="@layout/fragment_background" />
 </navigation>

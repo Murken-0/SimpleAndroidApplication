@@ -1,4 +1,4 @@
-package ru.mirea.muravievvr.mireaproject.ui.home;
+package ru.mirea.muravievvr.mireaproject.fragments.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

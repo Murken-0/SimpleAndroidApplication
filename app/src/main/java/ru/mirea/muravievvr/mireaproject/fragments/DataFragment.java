@@ -1,5 +1,7 @@
-package ru.mirea.muravievvr.mireaproject.ui;
+package ru.mirea.muravievvr.mireaproject.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,18 +9,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import ru.mirea.muravievvr.mireaproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BrowserFragment#newInstance} factory method to
+ * Use the {@link DataFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BrowserFragment extends Fragment {
-    private WebView webView;
+public class DataFragment extends Fragment {
+    private FloatingActionButton fab;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +31,7 @@ public class BrowserFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BrowserFragment() {
+    public DataFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class BrowserFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BrowserFragment.
+     * @return A new instance of fragment DataFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BrowserFragment newInstance(String param1, String param2) {
-        BrowserFragment fragment = new BrowserFragment();
+    public static DataFragment newInstance(String param1, String param2) {
+        DataFragment fragment = new DataFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,12 +65,14 @@ public class BrowserFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_browser, container, false);
-        webView = (WebView) view.findViewById(R.id.webView);
-        webView.loadUrl("https://www.google.com/");
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
-
-        return view;
+        View v = inflater.inflate(R.layout.fragment_data, container, false);
+        fab = (FloatingActionButton) v.findViewById(R.id.fab);
+        fab.setOnClickListener(v1 -> {
+            String url = "https://about.google/";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        });
+        return v;
     }
 }

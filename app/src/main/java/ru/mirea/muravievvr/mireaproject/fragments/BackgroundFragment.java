@@ -1,4 +1,4 @@
-package ru.mirea.muravievvr.mireaproject.ui;
+package ru.mirea.muravievvr.mireaproject.fragments;
 
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -19,7 +19,6 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import ru.mirea.muravievvr.mireaproject.R;
 import ru.mirea.muravievvr.mireaproject.databinding.FragmentBackgroundBinding;
 
 public class BackgroundFragment extends Fragment {
