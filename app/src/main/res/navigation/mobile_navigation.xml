@@ -41,4 +41,10 @@
         android:label="@string/menu_contacts"
         tools:layout="@layout/fragment_camera"/>
 
+    <fragment
+        android:id="@+id/nav_mike"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.MicrophoneFragment"
+        android:label="@string/menu_noise"
+        tools:layout="@layout/fragment_microphone"/>
+
 </navigation>

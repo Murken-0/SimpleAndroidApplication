@@ -28,5 +28,9 @@
             android:id="@+id/nav_camera"
             android:icon="@drawable/contact"
             android:title="@string/menu_contacts" />
+        <item
+            android:id="@+id/nav_mike"
+            android:icon="@drawable/noise"
+            android:title="@string/menu_noise" />
     </group>
 </menu>
