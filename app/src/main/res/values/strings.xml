@@ -14,6 +14,8 @@
     <string name="menu_steps">Steps</string>
     <string name="menu_contacts">Add contact</string>
     <string name="menu_noise">Noise level</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_converter">JPG to PNG Converter</string>
 
     <string name="hello_fragment_home">Для навигации используйте меню слева!</string>
 
