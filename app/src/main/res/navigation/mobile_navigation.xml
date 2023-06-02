@@ -10,53 +10,55 @@
         android:name="ru.mirea.muravievvr.mireaproject.fragments.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
         android:id="@+id/nav_browser"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.browser_data.BrowserFragment"
         android:label="@string/menu_browser"
         tools:layout="@layout/fragment_browser" />
-
     <fragment
         android:id="@+id/nav_data"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.browser_data.DataFragment"
         android:label="@string/menu_data"
         tools:layout="@layout/fragment_data" />
-
     <fragment
         android:id="@+id/nav_video"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.background.BackgroundFragment"
         android:label="@string/menu_video"
         tools:layout="@layout/fragment_background" />
-
     <fragment
         android:id="@+id/nav_sensors"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.SensorsFragment"
         android:label="@string/menu_steps"
         tools:layout="@layout/fragment_sensors"/>
-
     <fragment
         android:id="@+id/nav_camera"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.CameraFragment"
         android:label="@string/menu_contacts"
         tools:layout="@layout/fragment_camera"/>
-
     <fragment
         android:id="@+id/nav_mike"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.sens_cam_mike.MicrophoneFragment"
         android:label="@string/menu_noise"
         tools:layout="@layout/fragment_microphone"/>
-
     <fragment
         android:id="@+id/nav_profile"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.profile_data.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile"/>
-
     <fragment
         android:id="@+id/nav_convert"
         android:name="ru.mirea.muravievvr.mireaproject.fragments.profile_data.FilesFragment"
         android:label="@string/menu_converter"
         tools:layout="@layout/fragment_files"/>
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.network.NetworkFragment"
+        android:label="@string/menu_courses"
+        tools:layout="@layout/fragment_network"/>
+    <fragment
+        android:id="@+id/nav_maps"
+        android:name="ru.mirea.muravievvr.mireaproject.fragments.maps.MapsFragment"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_maps"/>
 
 </navigation>

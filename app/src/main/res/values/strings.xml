@@ -16,8 +16,31 @@
     <string name="menu_noise">Noise level</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_converter">JPG to PNG Converter</string>
+    <string name="menu_courses">Courses</string>
+    <string name="menu_maps">Maps</string>
 
-    <string name="hello_fragment_home">Для навигации используйте меню слева!</string>
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate
+with Firebase.</string>
+    <string name="hint_user_id">User ID</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="firebase_status_fmt">Firebase UID: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+    <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
+
+    <string name="unknown_error_message">WTF is going on?</string>
+    <string name="remote_error_message">Maps server cannot be reached</string>
+    <string name="network_error_message">Network troubles</string>
+
+    <string name="hello_fragment_home">Welcome to the club, buddy!</string>
 
     <string name="google_description">Google - это мировой лидер в области поиска в Интернете и онлайн-рекламы, а также одна из самых известных компаний в мире информационных технологий. Компания была основана в 1998 году Ларри Пейджем и Сергеем Брином в гараже в Калифорнии, США. Они начали работать над своим проектом, который получил название Google, в рамках своей диссертации в Стэнфордском университете.\n\n
 Google был создан как поисковая система, которая предлагала пользователям более точные результаты поиска, чем другие поисковые системы того времени. С помощью новой технологии, которую они разработали, называемой PageRank, Google мог предоставлять более релевантные результаты поиска для пользователей.\n\n
@@ -25,5 +48,4 @@ Google был создан как поисковая система, котор�
 Сегодня Google является одной из самых крупных и успешных компаний в мире информационных технологий. Компания имеет огромное количество пользователей по всему миру и продолжает разрабатывать новые продукты и технологии, которые меняют нашу жизнь и способ общения в Интернете.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="never_gonna_give_you_up_link">https://save4k.com/video.php?url=UUZGFkBYGkkRB1ZbRQYFFQpDHVJdVl4JUk5fAQELFlFWXx0QWgZQCRMOU0tVAgUKWlRLRVtLXFgGDg5UUF0ICwgAFANaX1IlW1doe00FIw5IdWR7AWpJB3Z6EAwUWQ0DFwUFSAJTDEhXVhRbU14JTCR-SV9-UVATb1VpAzAxX0tYdHkIYyZxPDUnYUN7EANSV1hGXXZ-WyZoCE4EQg1MU14PA14VEVoTEQFXD04MExUQU1YTQFxIEF5KUxYXCAVLXEEUC1tfAgVFD18PBFJDUyYDChNfVwQWWRUEUAMIXVxVQBdUcBFbS1FXVVcADRxXQ1xACFNMHFd0SlIQQglOD1QUXxBaXwdAEw4PAAVFDw8MRVBCXF1bFUQFBFRXUw0CH0RCFEVfBEAOC19XChUPBQBeFgd0VElREVtYF1lVDBRLU0YDURtFBxARD0tSEEAFEEMOBwMLF1UOCRAJCRAFAw8FBlQAUQJSUFEHAg9RXkcIRQ4EBAEIUQEADlBTQl5EUEIPVxUEUB4TXwAGB1NRU1EHFVYPeHchZXd/IUIQQEIEBgdVA1YGUkURQlNFAgsSWFRLRVtLXEAFe1MMQVZ7W0kXACVaBhBUIAtGU1BGVCIWXkZHUVwcV3RKUxQRDUpXSkFeQwEhQxYRFBcAdA4PDAAUAXZRV0tABXtEBBABWktJU0EVFlB2AhYQFwB0DwsVQ0JaUg94dhQHaXxdEzZ5e15qQD8KL14MWzd3RkYxXwILcHR/YE5fDk8IdBMvVkx8amUKD1IRYS8XVHZndConVDZCd1NgUU4uUwBCNlUtbnBNUXQfYxZnDw5ad1hEAR87MwldUkFpeDpbHloWFAVKU1RBDwtbRwclDg8XAHQOCERXcl5GFwt6CEEdBCYJElEXC3FCChZQdg8NC0ZRQA0CAxVCFVlBUF5Ydn8FJjsceUVrY3sOcitxX1oTBFNdBlc1FWFkeFNQQxxWAWYSPQF7QHULSyl1LEM1KC1gaF4nPygkWHIFS1JRNE4JWB0MIAB4VnhcVkk3QRYgI0N2VQk3BjNBdUcEQ3pRA1d-K1w1HQF9FwEi&amp;sid=9c3bd780&amp;title=Rick+Astley+-+Never+Gonna+Give+You+Up.mp4</string>
 </resources>
