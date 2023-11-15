@@ -44,6 +44,7 @@ public class BackgroundFragment extends Fragment {
 
             DownloadVideoTask task = new DownloadVideoTask(binding.videoView);
             String link = "https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4";
+
             task.execute(link);
         });
         return view;

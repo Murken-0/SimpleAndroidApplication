@@ -25,6 +25,13 @@
             android:contentDescription="firebase logo" />
 
         <TextView
+            android:id="@+id/android_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emailpassword_title_text"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

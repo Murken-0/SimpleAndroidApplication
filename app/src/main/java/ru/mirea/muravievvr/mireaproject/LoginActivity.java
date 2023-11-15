@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.yandex.mapkit.MapKitFactory;
 
 import java.util.Objects;
 
@@ -19,12 +21,19 @@ import ru.mirea.muravievvr.mireaproject.databinding.ActivityLoginBinding;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = LoginActivity.class.getSimpleName();
     private ActivityLoginBinding binding;
+    private final String MAPKIT_API_KEY = "d8cdd37d-1f9b-422b-a7e3-e571ff1b4708";
     private FirebaseAuth mAuth;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.androidId.setText(getString(R.string.android_id_text, getAndroidID()));
+
+        MapKitFactory.setApiKey(MAPKIT_API_KEY);
+
         FirebaseApp.initializeApp(LoginActivity.this);
         mAuth = FirebaseAuth.getInstance();
 
@@ -46,6 +55,10 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         });
+    }
+
+    private String getAndroidID() {
+        return Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
     @Override

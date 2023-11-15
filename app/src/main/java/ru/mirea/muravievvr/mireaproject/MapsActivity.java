@@ -77,8 +77,6 @@ public class MapsActivity extends AppCompatActivity implements DrivingSession.Dr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String MAPKIT_API_KEY = "d8cdd37d-1f9b-422b-a7e3-e571ff1b4708";
-        MapKitFactory.setApiKey(MAPKIT_API_KEY);
         MapKitFactory.initialize(this);
         DirectionsFactory.initialize(this);
         binding = ActivityMapsBinding.inflate(getLayoutInflater());

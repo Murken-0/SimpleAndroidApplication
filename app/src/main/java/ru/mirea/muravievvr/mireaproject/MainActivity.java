@@ -1,8 +1,11 @@
 package ru.mirea.muravievvr.mireaproject;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -13,6 +16,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import ru.mirea.muravievvr.mireaproject.databinding.ActivityMainBinding;
 
@@ -27,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        List<String> appList = new ArrayList<>();
+        PackageManager packageManager = getPackageManager();
+        List<PackageInfo> installedPackages = packageManager.getInstalledPackages(0);
+        for (PackageInfo applicationInfo : installedPackages) {
+            appList.add(applicationInfo.packageName);
+        }
+
+        if (appList.contains("com.anydesk.anydeskandroid")) {
+            Toast.makeText(this, "Установлено недопустимое ПО (AnyDesk)", Toast.LENGTH_SHORT).show();
+            this.finish();
+            System.exit(0);
+        }
 
         setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;

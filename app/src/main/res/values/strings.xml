@@ -18,6 +18,7 @@
     <string name="menu_converter">JPG to PNG Converter</string>
     <string name="menu_courses">Courses</string>
     <string name="menu_maps">Maps</string>
+    <string name="menu_apps">Apps</string>
 
     <string name="label_emailpassword">Email/Password Authentication</string>
     <string name="desc_emailpassword">Use an email and password to authenticate
@@ -34,6 +35,7 @@ with Firebase.</string>
     <string name="firebase_user_management">Firebase User Management</string>
     <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
     <string name="emailpassword_title_text">Email and Password</string>
+    <string name="android_id_text">Android ID: %s</string>
     <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
 
     <string name="unknown_error_message">WTF is going on?</string>
