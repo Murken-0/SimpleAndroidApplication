@@ -95,8 +95,9 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Enter all details!", Toast.LENGTH_SHORT).show();
             return;
         }
-        Log.d(TAG, "createAccount:" + email);
-        mAuth.createUserWithEmailAndPassword(email, password)
+        String hashedPassword = ShaHasher.hash(password);
+        Log.d(TAG, "createAccount:" + email + " | " + hashedPassword);
+        mAuth.createUserWithEmailAndPassword(email, hashedPassword)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         Log.d(TAG, "createUserWithEmail:success");
@@ -110,15 +111,16 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     private void signIn(String email, String password) {
-        Log.d(TAG, "signIn:" + email);
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+        String hashedPassword = ShaHasher.hash(password);
+        Log.d(TAG, "signIn:" + email+ " | " + hashedPassword);
+        mAuth.signInWithEmailAndPassword(email, hashedPassword).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
-                Log.d(TAG, "signInWithEmail:success");
+                Log.d(TAG, "signInWithEmail:success:");
                 FirebaseUser user = mAuth.getCurrentUser();
                 updateUI(user);
             }
             else {
-                Log.w(TAG, "signInWithEmail:failure", task.getException());
+                Log.w(TAG, "signInWithEmail:failure:", task.getException());
                 Toast.makeText(LoginActivity.this, R.string.auth_failed,
                         Toast.LENGTH_SHORT).show(); updateUI(null);
             }
