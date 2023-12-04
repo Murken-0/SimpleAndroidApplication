@@ -1,5 +1,6 @@
 package ru.mirea.muravievvr.mireaproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,12 +10,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.safetynet.SafetyNet;
+import com.google.android.gms.safetynet.SafetyNetApi;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.yandex.mapkit.MapKitFactory;
 
 import java.util.Objects;
+import java.util.concurrent.Executor;
 
 import ru.mirea.muravievvr.mireaproject.databinding.ActivityLoginBinding;
 
@@ -22,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = LoginActivity.class.getSimpleName();
     private ActivityLoginBinding binding;
     private final String MAPKIT_API_KEY = "d8cdd37d-1f9b-422b-a7e3-e571ff1b4708";
+    private final String CAPCHA_API_SITE_KEY = "6LcPUiEpAAAAADO3OGYi_75uKkxKAhNrShSNlkG-";
     private FirebaseAuth mAuth;
 
     @Override
@@ -88,6 +97,35 @@ public class LoginActivity extends AppCompatActivity {
             binding.verButton.setVisibility(View.GONE);
             binding.goToAppButton.setVisibility(View.GONE);
         } }
+
+    private void verifyWithCapcha(Boolean isCreating, String email, String password) {
+        SafetyNet.getClient(this).verifyWithRecaptcha(CAPCHA_API_SITE_KEY)
+                .addOnSuccessListener((Executor) this,
+                        response -> {
+                            String userResponseToken = response.getTokenResult();
+                            if (!userResponseToken.isEmpty()) {
+                                Toast.makeText(LoginActivity.this, "CAPTCHA verification done", Toast.LENGTH_SHORT).show();
+                                if (isCreating) {
+                                    createAccount(email, password);
+                                } else {
+                                    signIn(email, password);
+                                }
+                            }
+                        })
+                .addOnFailureListener((Executor) this, e -> {
+                    if (e instanceof ApiException) {
+                        ApiException apiException = (ApiException) e;
+                        int statusCode = apiException.getStatusCode();
+                        Log.d(TAG, "Error: " + CommonStatusCodes
+                                .getStatusCodeString(statusCode));
+                    } else {
+                        Log.d(TAG, "Error: " + e.getMessage());
+                    }
+                    Toast.makeText(LoginActivity.this, "CAPTCHA verification failed", Toast.LENGTH_SHORT).show();
+                });
+    }
+
+
     private void createAccount(String email, String password) {
         if (email == null || email.isEmpty()
             || password == null || password.isEmpty()) {

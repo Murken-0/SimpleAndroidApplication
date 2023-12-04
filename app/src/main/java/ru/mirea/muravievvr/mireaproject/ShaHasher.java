@@ -35,6 +35,7 @@ public class ShaHasher {
 
         for (int i = 0, n = words.length / 16; i < n; ++i) {
             System.arraycopy(words, i * 16, W, 0, 16);
+
             for (int t = 16; t < W.length; ++t) {
                 W[t] = smallSig1(W[t - 2]) + W[t - 7] + smallSig0(W[t - 15]) + W[t - 16];
             }
@@ -52,7 +53,6 @@ public class ShaHasher {
             for (int t = 0; t < H.length; ++t) {
                 H[t] += TEMP[t];
             }
-
         }
         return new String(toByteArray(H), StandardCharsets.UTF_8);
     }
