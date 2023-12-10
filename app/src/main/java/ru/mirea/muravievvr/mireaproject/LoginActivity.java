@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = LoginActivity.class.getSimpleName();
     private ActivityLoginBinding binding;
     private final String MAPKIT_API_KEY = "d8cdd37d-1f9b-422b-a7e3-e571ff1b4708";
-    private final String CAPCHA_API_SITE_KEY = "6LcPUiEpAAAAADO3OGYi_75uKkxKAhNrShSNlkG-";
+    private final String CAPCHA_API_SITE_KEY = "6LepnCwpAAAAAP4rqZ2zVVASBldSsZs6p_4REPK2";
     private FirebaseAuth mAuth;
 
     @Override
@@ -47,12 +47,18 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         binding.emailCreateAccountButton.setOnClickListener(v ->
-                createAccount(binding.fieldEmail.getText().toString(), binding.fieldPassword.getText().toString()));
+                        verifyWithCapcha(true,
+                                binding.fieldEmail.getText().toString(),
+                                binding.fieldPassword.getText().toString())
+        );
 
         binding.signOutButton.setOnClickListener(v -> signOut());
 
         binding.emailSignInButton.setOnClickListener(v ->
-                signIn(binding.fieldEmail.getText().toString(), binding.fieldPassword.getText().toString()));
+                verifyWithCapcha(false,
+                        binding.fieldEmail.getText().toString(),
+                        binding.fieldPassword.getText().toString())
+        );
 
         binding.verButton.setOnClickListener(v -> {
             sendEmailVerification();
@@ -100,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void verifyWithCapcha(Boolean isCreating, String email, String password) {
         SafetyNet.getClient(this).verifyWithRecaptcha(CAPCHA_API_SITE_KEY)
-                .addOnSuccessListener((Executor) this,
+                .addOnSuccessListener(this,
                         response -> {
                             String userResponseToken = response.getTokenResult();
                             if (!userResponseToken.isEmpty()) {
@@ -112,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         })
-                .addOnFailureListener((Executor) this, e -> {
+                .addOnFailureListener(this, e -> {
                     if (e instanceof ApiException) {
                         ApiException apiException = (ApiException) e;
                         int statusCode = apiException.getStatusCode();
