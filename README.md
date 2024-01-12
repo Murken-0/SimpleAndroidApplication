@@ -4,8 +4,9 @@ This project implements multifunctional android application.
 
 The application implements following functions:
 1. Firebase Authentification
-2. Browser
-3. Maps
-4. Video downloader
-5. Step counter
-6. JPG to PNG converter etc.
+2. Capcha
+3. Browser
+4. Maps
+5. Video downloader
+6. Step counter
+7. JPG to PNG converter etc.
