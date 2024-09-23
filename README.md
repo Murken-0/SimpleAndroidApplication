@@ -1,6 +1,4 @@
-This is practice project. The main goal of it is to learn android develop. 
-
-This project implements multifunctional android application.
+The main goal of the project is to make an android application. 
 
 The application implements following functions:
 1. Firebase Authentification
